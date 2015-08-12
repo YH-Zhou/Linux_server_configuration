@@ -8,9 +8,11 @@
       URL: http://52.10.172.52/
 
 ### Configuration Steps
-
+      # create grader user
+      'sudo usermod -a -G sudo grader'  #  password : grader
+      
       # create catalog user
-      'sudo usermod -a -G sudo <username>'
+      'sudo usermod -a -G sudo catalog'  #  password: catalog
    
       # update and upgrade the installed packages
       'sudo apt-get update'

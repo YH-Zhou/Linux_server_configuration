@@ -85,11 +85,11 @@
       
       # create wsgi file
       'sudo vim /var/www/catalog/item_catalog.wsgi'
-<<<<<<< HEAD
+
 
       # Configure the virtual host
       'sudo vim /etc/apache2/sites-available/item_catalog.conf'
-=======
+
       # Configure item_catalog.wsgi as follows:
             #!/usr/bin/python
             import sys
@@ -119,7 +119,7 @@
                 LogLevel warn
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
             </VirtualHost>
->>>>>>> bcdacd512dc93ae16a5c148bd775e48fba53b46e
+
 
       # enable item_catalog application
       'a2ensite item_catalog.conf'

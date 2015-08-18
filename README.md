@@ -5,7 +5,7 @@
       SSH port: 2200
    
 ### The complete URL to the hosted web application
-      URL: http://52.10.172.52/
+      URL: http://ec2-52-10-172-52.us-west-2.compute.amazonaws.com (http://52.10.172.52/)
 
 ### Configuration Steps
       # create grader user

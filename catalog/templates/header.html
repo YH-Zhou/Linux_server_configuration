@@ -1,35 +1,21 @@
 <div class="row top-menu">
-  <div class="col-md-6">
+  <div class="col-md-6 text-left">
     <a href="{{url_for('catalogMenu')}}">
     <span class="glyphicon glyphicon-home" aria-hidden="true">
     </span>Show All Catalogs</a>
   </div>
   <div class="col-md-6 text-right">
     {%if 'username' not in session %}
-    <a href="{{url_for('showLogin')}}">Login </a>
+    <a href="{{url_for('showLogin')}}"><span class="glyphicon glyphicon-log-in" aria-hidden="true">
+	</span>Login </a>
     {% else %}
-    <a href="{{url_for('disconnect')}}">Logout </a>
+    <a href="{{url_for('disconnect')}}"><span class="glyphicon glyphicon-log-out" aria-hidden="true">
+	</span>Logout </a>
     {% endif %} 
   </div>
 </div>
-<!--
-<div class = "container-fluid">
-  <div class="row top-menu">
-    <div class="col-md-10"></div>
-    <div class="col-md-2 text-right"> </div>
-  </div>
-  <div class="row divider blue">
-    <div class="col-md-12"></div>
-  </div>
-  <div class="row banner main">
-    <div class="col-md-1"></div>
-    <div class="col-md-11 padding-none">
-      <h1>Catalogs</h1>
-    </div>
-  </div>
-</div>
--->
-<div class="container">
+
+<div class="container carousel">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -72,9 +58,6 @@
           <p>The recreation and sport of gliding across an ice surface on blades fixed to the bottoms of shoes.</p>
         </div>
       </div>
-
-    
-
   
     </div>
 

@@ -142,6 +142,13 @@
       http://killtheyak.com/use-postgresql-with-django-flask/
       http://killtheyak.com/use-postgresql-with-django-flask/
   
+  
+### Monitor 
+      https://www.digitalocean.com/community/tutorials/how-to-install-munin-on-an-ubuntu-vps
+      https://www.digitalocean.com/community/tutorials/how-to-install-munin-on-an-ubuntu-vps
+      
+### accelerate your web-application by using Nginx web-server; protection against Dos (denial-of-service) attacks
+      http://nginx.org/en/books.html
 
 ### Contents in ~/.ssh/udacity_key.rsa file
 

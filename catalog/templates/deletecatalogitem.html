@@ -10,9 +10,9 @@
       <br>
       <form action="{{url_for('deleteCatalogItem', catalog_id=item.catalog_id, catalogItem_id=item.id)}}"
         method = 'post'>
-        <input type="submit" class="btn btn-info" value="Delete">
+        <input type="submit" class="btn btn-success btn-outline" value="Delete">
         <a href="{{url_for('catalogItems', catalog_id = catalog_id)}}" 
-          class="btn btn-info" role="button">Cancel</a> 
+          class="btn btn-success btn-outline" role="button">Cancel</a> 
       </form>
     </div>
   </div>

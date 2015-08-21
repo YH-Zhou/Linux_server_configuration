@@ -18,23 +18,13 @@
 <div class = "row">
 <div class = "col-md-3">
   <h1> Categories </h1>
-  <div class="panel panel-info">
-    <div class="panel-body">
-      <div class = "row">
-        <div class = "col-md-3"></div>
-        <div class = "col-md-6">
+    <ul class="nav nav-pills nav-stacked">
+	<li class="active"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Home</a></li>
           {% for i in catalogs %}
-          <a href = '{{url_for('catalogItems', catalog_id = i.id)}}'>
-          <p>
-            {{i.name}}
-          </p>
-          </a>
+         <li><a href = '{{url_for('catalogItems', catalog_id = i.id)}}'>
+          <i class="glyphicon glyphicon-leaf"></i>{{i.name}}</a></li>
           {% endfor %}
-        </div>
-        <div class = "col-md-3"></div>
-      </div>
-    </div>
-  </div>
+            </ul>
 </div>
 
 <div class = "col-md-9">
@@ -44,13 +34,16 @@
       <div class="row row-eq-height">
         {% for i in latestItems%}
         <div class="col-md-6">
-          <div class="panel panel-info">
-            <div class="panel-body">
+
+            <div class="box">
+                <div class="box-icon">
+                    <span class="fa fa-4x fa-bicycle"></span>
+                </div>
+
               <div class = 'itemName'>
                 <a href = "{{url_for('showItemInfo', catalog_id = i.catalog_id,
                   catalogItem_id = i.id)}}"><h2>{{i.name}}</h2></a>
                 <p><em>Description: </em>{{i.description}}</p>
-              </div>
             </div>
           </div>
         </div>

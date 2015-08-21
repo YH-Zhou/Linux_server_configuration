@@ -25,7 +25,7 @@ class Catalog(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User, cascade="delete")
+    user = relationship(User)
     description = Column(String)
     #description = Column(Text)
 
@@ -48,9 +48,9 @@ class CatalogItem(Base):
     description = Column(String)
     #description = Column(Text)
     catalog_id = Column(Integer, ForeignKey('catalog.id'))
-    catalog = relationship(Catalog, cascade="delete")
+    catalog = relationship(Catalog)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User, cascade="delete")
+    user = relationship(User)
 
     @property
     def serialize(self):

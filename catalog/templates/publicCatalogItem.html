@@ -18,23 +18,18 @@
 <div class = "row">
 <div class = "col-md-3">
   <h1> Categories </h1>
-  <div class="panel panel-info">
-    <div class="panel-body">
-      <div class = "row">
-        <div class = "col-md-3"></div>
-        <div class = "col-md-6">
+    <ul class="nav nav-pills nav-stacked">
+	<li><a href='{{url_for('catalogMenu')}}'><i class="glyphicon glyphicon-list-alt"></i>Home</a></li>
           {% for i in catalogs %}
-          <a href = '{{url_for('catalogItems', catalog_id = i.id)}}'>
-          <p>
-            {{i.name}}
-          </p>
-          </a>
+	{% if i.id==catalog.id %}
+         <li class="active"><a href = '{{url_for('catalogItems', catalog_id = i.id)}}'>
+          <i class="glyphicon glyphicon-leaf"></i>{{i.name}}</a></li>
+	{% else %}
+         <li><a href = '{{url_for('catalogItems', catalog_id = i.id)}}'>
+          <i class="glyphicon glyphicon-leaf"></i>{{i.name}}</a></li>
+	{% endif %}
           {% endfor %}
-        </div>
-        <div class = "col-md-3"></div>
-      </div>
-    </div>
-  </div>
+            </ul>
 </div>
 
 <div class = "col-md-9">
@@ -48,24 +43,25 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="row row-eq-height">
+      <div class="row">
         {% for i in items%}
         <div class="col-md-6">
-          <div class="panel panel-info">
-            <div class="panel-body">
+            <div class="box">
+                <div class="box-icon">
+                    <span class="fa fa-bicycle fa-3x"></span>
+                </div>
               <div class = 'itemName'>
                 <a href = "{{url_for('showItemInfo', catalog_id = catalog_id,
                   catalogItem_id = i.id)}}">
                   <h2>{{i.name}}</h2>
                 </a>
                 <p><em>Description:</em> {{i.description}}</p>
-              </div>
             </div>
           </div>
         </div>
         {% if loop.index is divisibleby 2 %}
       </div>
-      <div class="row row-eq-height">
+      <div class="row">
         {% endif %}
         {% endfor %}
       </div>

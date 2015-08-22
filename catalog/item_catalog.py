@@ -198,9 +198,9 @@ def fbconnect():
     login_session['user_id'] = user_id
 
     output = ''
-    output += '<h2 class = "text-center">Welcome, '
+    output += '<h3 class = "text-center">Welcome, '
     output += login_session['username']
-    output += '!</h2></br>'
+    output += '!</h3></br>'
     output += '<img src="'
     output += login_session['picture']
     output += ' " style = "width: 230px; height: 230px; \
@@ -537,6 +537,11 @@ def disconnect():
     else:
         flash("You were not logged in")
         return redirect(url_for('catalogMenu'))
+
+@app.route('/aboutMe')
+def authorProfile():
+    """ Show the profile of the website author """
+    return render_template('aboutMe.html')
 
 
 if __name__ == '__main__':

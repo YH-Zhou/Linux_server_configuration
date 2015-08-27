@@ -1,14 +1,14 @@
 <div class="row top-menu">
-  <div class="col-md-6 text-left">
+  <div class="col-md-6 col-sm-6 text-left">
     <a href="{{url_for('catalogMenu')}}">
     <span class="glyphicon glyphicon-home" aria-hidden="true">
     </span>Show All Catalogs</a>
   </div>
-  <div class="col-md-5 text-right">
+  <div class="col-md-4 col-sm-4 text-right">
     <a href="{{url_for('authorProfile')}}"><span class="glyphicon glyphicon-user" aria-hidden="true">
 	</span>About Me </a>
 	</div>
-  <div class="col-md-1 text-right">
+  <div class="col-md-2 col-sm-2 text-center">
     {%if 'username' not in session %}
     <a href="{{url_for('showLogin')}}"><span class="glyphicon glyphicon-log-in" aria-hidden="true">
 	</span>Login </a>
@@ -40,13 +40,6 @@
         </div>
       </div>
 
-      <div class="item">
-        <img src="/static/snowboard.jpg" alt="Snowboarding" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Snowboarding</h3>
-	    <p>A winter sport that involves descending a slope while standing on a board attached to a riders feet</p>
-        </div>
-      </div>
 
       <div class="item">
         <img src="/static/basketball.jpg" alt="Basketball" width="460" height="345">
@@ -61,6 +54,14 @@
         <div class="carousel-caption">
           <h3>Skating</h3>
           <p>The recreation and sport of gliding across an ice surface on blades fixed to the bottoms of shoes.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/static/snowboard.jpg" alt="Snowboarding" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Snowboarding</h3>
+	    <p>A winter sport that involves descending a slope while standing on a board attached to a riders feet</p>
         </div>
       </div>
   
